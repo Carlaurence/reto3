@@ -20,7 +20,7 @@ public class ServicioMensaje {
     public Tmensaje getMensajeById(int id){return repositoryTmensaje.findById(id).orElse(null);}
     
     public  Tmensaje updateMensaje(Tmensaje mensaje){//Aqui entra la nueva informacion
-        Tmensaje mensajeExistente = repositoryTmensaje.findById(mensaje.getId()).orElse(null);
+        Tmensaje mensajeExistente = repositoryTmensaje.findById(mensaje.getIdMessage()).orElse(null);
         mensajeExistente.setMessageText(mensaje.getMessageText());
         mensajeExistente.setClient(mensaje.getClient());
         mensajeExistente.setCabin(mensaje.getCabin());

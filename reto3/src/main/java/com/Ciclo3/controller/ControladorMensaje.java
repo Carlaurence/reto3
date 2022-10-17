@@ -53,7 +53,7 @@ public class ControladorMensaje {
     
     @DeleteMapping("/delete") //Extension URL especifica para acceder al servicio DELETE/BORRAR
     public ResponseEntity deleteMensaje(@RequestBody Tmensaje mensaje){
-        serviceType.deleteMensaje(mensaje.getId());
+        serviceType.deleteMensaje(mensaje.getIdMessage());
         return ResponseEntity.status(204).build();
     }
 }

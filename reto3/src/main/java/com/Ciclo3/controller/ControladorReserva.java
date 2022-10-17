@@ -51,7 +51,7 @@ public class ControladorReserva {
     
     @DeleteMapping("/delete") //Ext. URL especifica para acceder al servicio DELETE/BORRAR
     public ResponseEntity deleteReserva(@RequestBody Treserva reserva){
-        serviceType.deleteReserva(reserva.getId());
+        serviceType.deleteReserva(reserva.getIdReservation());
         return ResponseEntity.status(204).build();
     }
 }

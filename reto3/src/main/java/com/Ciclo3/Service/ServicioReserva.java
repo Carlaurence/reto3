@@ -25,7 +25,7 @@ public class ServicioReserva {
     }
     
     public Treserva updateReserva(Treserva reserva){
-        Treserva reservaExistente = repositoryTreserva.findById(reserva.getId()).orElse(null); 
+        Treserva reservaExistente = repositoryTreserva.findById(reserva.getIdReservation()).orElse(null); 
         reservaExistente.setStartDate(reserva.getStartDate());
         reservaExistente.setDevolutionDate(reserva.getDevolutionDate());
         reservaExistente.setClient(reserva.getClient());
